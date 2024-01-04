@@ -1,0 +1,139 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --btn-size: 70px;
+
+  --background-clr: #fff;
+  --line-clr: #ededed;
+  --primary-clr: #864cff;
+  --input-text-clr: #6f6f6f;
+  --input-text-placeholder-clr: #6f6f6f;
+  --border-input-clr: #efefef;
+}
+
+::placeholder {
+  color: var(--input-text-placeholder-clr);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  outline: none;
+  border: 1px solid var(--border-input-clr);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.error {
+  --border-input-clr: red;
+  --input-text-clr: red;
+}
+
+.text-error {
+  letter-spacing: 0.2px !important;
+}
+
+button {
+  width: var(--btn-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-clr);
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--background-clr);
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px 20px 100px 20px;
+
+  display: grid;
+  gap: 2rem;
+}
+
+.input-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.input-contain {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 125px;
+}
+
+.input-contain > span {
+  font-weight: bold;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--input-text-clr);
+}
+
+.button-section {
+  position: relative;
+  height: var(--btn-size);
+  display: flex;
+  align-items: center;
+}
+
+.button-section > button {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0%;
+  padding: 1.125rem;
+  transition: 50ms ease-in-out;
+
+  &:active {
+    background: purple;
+    box-shadow: 0 0 3px 1px purple;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--line-clr);
+}
+
+.result-section {
+  line-height: 3.25rem;
+}
+
+.result-section > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: skewX(-15deg);
+}
+
+.prefix-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.prefix-res {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--primary-clr);
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding: 2.5rem 3rem;
+  }
+
+  .button-section {
+    height: 0;
+    width: 520px;
+  }
+
+  .button-section > button {
+    left: revert;
+    right: 0;
+    translate: revert;
+  }
+}

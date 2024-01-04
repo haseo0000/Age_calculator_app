@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
